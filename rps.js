@@ -8,6 +8,7 @@ const scissors = document.getElementById("scissors");
 const userScoreDisplay = document.getElementById("user_score");
 const cpuScoreDisplay = document.getElementById("cpu_score");
 const displayCpuMove = document.getElementById("cpu_move")
+const result = document.getElementById("result")
 userScoreDisplay.textContent = userScore;
 cpuScoreDisplay.textContent = cpuScore;
 const getRandomMove = () => {
@@ -34,16 +35,20 @@ function handleClick(selectedMove) {
     (userMove === "paper" && cpuMove === "rock")
   ) {
     userScore++;
+    result.textContent = "You Won!"
+    result.style.color = 'green'
   } else if (
     (userMove === "scissors" && cpuMove === "rock") ||
     (userMove === "paper" && cpuMove === "scissors") ||
     (userMove === "rock" && cpuMove === "paper")
   ) {
     cpuScore++;
+    result.textContent = "You Lost!"
+    result.style.color = 'red'
   }
   else{
-    alert("It's a draw")
-  }
+    result.textContent = "Draw!"
+    result.style.color = '#ffc40c'  }
   updateScore();
 };
 
