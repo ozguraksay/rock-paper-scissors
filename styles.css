@@ -1,0 +1,48 @@
+#body{
+    background-color: #effcfe;
+    margin: 0;
+    padding: 0;
+}
+img{
+    transform: scale(1.1);
+    background: transparent;
+}
+.scoreboard {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    margin: 1% auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.team {
+    flex: 1;
+    text-align: center;
+    padding: 5%;
+    border-right: 1px solid #ccc;
+}
+
+.team:last-child {
+    border-right: none;
+}
+
+.team p {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5%s;
+    text-align: center;
+    margin-top: auto;
+}
+#paper, #rock, #scissors:hover{
+    cursor: pointer;  
+}
+#cpu{
+    margin: 1%;
+}
